@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c78c06fe-fb10-4f75-9822-2284a2268f5c" name="Changes" comment="A G s objektumok kommentezve és 2 függvény a JatekPanel ben is">
+      <change beforePath="$PROJECT_DIR$/palya.txt" beforeDir="false" afterPath="$PROJECT_DIR$/palya.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/fixy2" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NzxzPU61nAXxniEEPwnDynIEfU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ninaj/Documents/BME/4_felev/Szoftprojekt lab/6. Skeleton elkészítés/UJ_SIVATAG&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ninaj\Documents\BME\4_felev\Szoftprojekt lab\6. Skeleton elkészítés\UJ_SIVATAG" />
+      <recent name="C:\Users\ninaj\Documents\BME\4_felev\Szoftprojekt lab\6. Skeleton elkészítés\UJ_SIVATAG\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Skeleton" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c78c06fe-fb10-4f75-9822-2284a2268f5c" name="Changes" comment="" />
+      <created>1680680976691</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680680976691</updated>
+      <workItem from="1680680978340" duration="376000" />
+      <workItem from="1680693931942" duration="155000" />
+      <workItem from="1680694096733" duration="1039000" />
+      <workItem from="1680695153418" duration="1865000" />
+      <workItem from="1681064377361" duration="91000" />
+      <workItem from="1681470980995" duration="1126000" />
+      <workItem from="1681578429810" duration="6238000" />
+      <workItem from="1681585737123" duration="2892000" />
+      <workItem from="1681633286637" duration="666000" />
+      <workItem from="1681634521665" duration="90000" />
+      <workItem from="1681634639058" duration="1156000" />
+      <workItem from="1681636080904" duration="4222000" />
+      <workItem from="1682532488661" duration="575000" />
+      <workItem from="1682535749979" duration="49000" />
+      <workItem from="1682775911855" duration="6458000" />
+      <workItem from="1682869788770" duration="833000" />
+      <workItem from="1684934297723" duration="8257000" />
+      <workItem from="1685095801823" duration="1632000" />
+      <workItem from="1685106782634" duration="495000" />
+      <workItem from="1685114019586" duration="4334000" />
+      <workItem from="1685217289225" duration="6149000" />
+      <workItem from="1685302684540" duration="5073000" />
+      <workItem from="1685392666481" duration="3751000" />
+    </task>
+    <task id="LOCAL-00001" summary="Sivatag">
+      <created>1680681178919</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680681178919</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Sivatag">
+      <created>1680681289795</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680681289795</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Jatek nélküli Csofogado objektumok">
+      <created>1680948548839</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680948548839</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Megcsináltam a menüt.">
+      <created>1681472108131</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681472108131</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Csofogado fuggvenyek javitas, szep kiiras + Szerelo TartottCso setter/getter">
+      <created>1681583805567</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681583805567</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Csofogado fuggvenyek javitas, szep kiiras + Szerelo TartottCso setter/getter">
+      <created>1681585401831</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681585401831</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Csofogado fuggvenyek javitas, szep kiiras + Szerelo TartottCso setter/getter">
+      <created>1681585446464</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681585446464</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Cso atiras, Pumpa/Csofogado konstruktor javítás,">
+      <created>1681589489654</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681589489654</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Jatek kesz">
+      <created>1681634931241</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681634931241</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Jatek vége jav">
+      <created>1681635618464</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681635618464</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Új osztályok felvétele grafikus felülethez">
+      <created>1684931096603</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684931096604</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Új osztályok felvétele grafikus felülethez">
+      <created>1684942308833</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684942308833</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Minden jo a ciszterna bovulesen kivul">
+      <created>1685102039993</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1685102039993</updated>
+    </task>
+    <task id="LOCAL-00014" summary="A G s objektumok kommentezve és 2 függvény a JatekPanel ben is">
+      <created>1685397811964</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685397811964</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Sivatag" />
+    <MESSAGE value="Mezo, Cso es Mezo teszter osztaly" />
+    <MESSAGE value="Jatek nélküli Csofogado objektumok" />
+    <MESSAGE value="Megcsináltam a menüt." />
+    <MESSAGE value="Csofogado fuggvenyek javitas, szep kiiras" />
+    <MESSAGE value="Csofogado fuggvenyek javitas, szep kiiras + Szerelo TartottCso setter/getter" />
+    <MESSAGE value="Cso atiras, Pumpa/Csofogado konstruktor javítás," />
+    <MESSAGE value="Jatek kesz" />
+    <MESSAGE value="Jatek vége jav" />
+    <MESSAGE value="Új osztályok felvétele grafikus felülethez" />
+    <MESSAGE value="Minden jo a ciszterna bovulesen kivul" />
+    <MESSAGE value="A G s objektumok kommentezve és 2 függvény a JatekPanel ben is" />
+    <MESSAGE value="MUKODIIIIIIIIIIIIIIIIK (A set az kis s)" />
+    <option name="LAST_COMMIT_MESSAGE" value="MUKODIIIIIIIIIIIIIIIIK (A set az kis s)" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/UJ_SIVATAG$Main.ic" NAME="Main Coverage Results" MODIFIED="1681641183210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
