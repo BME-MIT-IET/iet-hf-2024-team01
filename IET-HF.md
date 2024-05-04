@@ -1,4 +1,6 @@
 # Drukmákori sivatag
+A szoftver egy PC-n játszható játékprogram. A játékban két csapatba kerülhetnek a játékosok: szerelők és szabotőrök. A szerelők célja egy csatornahálózat karbantartása, míg a szabotőröké annak rongálása. A program szórakoztatás céljából készül, de a megvalósítás közben cél a megismert OOT és Clean-code elvek betartása.
+
 ### Cső színei:
 - nincs állapot: szürke
 - van víz simán: kék
