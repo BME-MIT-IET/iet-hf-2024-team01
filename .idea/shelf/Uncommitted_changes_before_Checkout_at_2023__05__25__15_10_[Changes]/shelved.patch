@@ -1,0 +1,411 @@
+Index: src/Frame.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.swing.*;\r\nimport java.awt.event.FocusEvent;\r\nimport java.awt.event.FocusListener;\r\nimport java.awt.event.KeyEvent;\r\nimport java.awt.event.KeyListener;\r\nimport java.io.IOException;\r\nimport java.util.Objects;\r\n\r\npublic class Frame extends JFrame {\r\n    private MenuPanel menu;\r\n    private JatekPanel game;\r\n\r\n    /**\r\n     * Alapból létrehoz egy ablakot, amiben a menü panel lesz az alapértelmezett\r\n     */\r\n    public Frame() throws IOException {\r\n        setTitle(\"Drukmákori sivatag gengg\");\r\n        setIconImage(new ImageIcon(\"teve.jpg\").getImage());\r\n        menu = new MenuPanel();\r\n        game = new JatekPanel();\r\n        add(menu);\r\n\r\n\r\n        JTextField menuFileBe = menu.getFileBe();\r\n\r\n        JButton menuStart = menu.getBStart();\r\n\r\n        JButton menuElfogad = menu.getElfogad();\r\n\r\n        menuFileBe.addFocusListener(new FocusListener() {\r\n            @Override\r\n            public void focusGained(FocusEvent e) {\r\n                menuStart.setEnabled(false);\r\n            }\r\n\r\n            @Override\r\n            public void focusLost(FocusEvent e) {}\r\n        });\r\n\r\n        menuElfogad.addActionListener(e -> {\r\n            if(menuFileBe.getText() != null && !menuFileBe.getText().equals(\"\")){\r\n                menuStart.setEnabled(true);\r\n            }\r\n        });\r\n\r\n        menuStart.addActionListener(e -> {\r\n            try{\r\n                game.getJatek().PalyaBetolt(menuFileBe.getText());\r\n                setFocusable(true);\r\n                PanelValt();\r\n            } catch (IOException ex) {\r\n                JOptionPane.showMessageDialog(null,ex.getMessage());\r\n            }\r\n        });\r\n\r\n        this.addKeyListener(new KeyListener() {\r\n            @Override\r\n            public void keyTyped(KeyEvent e) {\r\n\r\n            }\r\n\r\n            @Override\r\n            public void keyPressed(KeyEvent e) {\r\n                    if(e.getKeyChar()=='q')\r\n                    {\r\n                        game.m.jatekosMozgatas();\r\n                        repaint();\r\n                        repaint();\r\n                    }\r\n                if(e.getKeyChar()=='w')\r\n                {\r\n                    game.m.pumpatFelvesz();\r\n                    repaint();\r\n                    repaint();\r\n                }\r\n                if(e.getKeyChar()=='e')\r\n                {\r\n                    game.m.pumpatElhelyez();\r\n                    repaint();\r\n                    repaint();\r\n                }\r\n            }\r\n\r\n            @Override\r\n            public void keyReleased(KeyEvent e) {\r\n\r\n            }\r\n        });\r\n        JButton gameMentes=game.getMentes();\r\n        gameMentes.addActionListener(e -> {\r\n            try {\r\n                game.getJatek().Save(\"elmentett.txt\");\r\n                JOptionPane.showMessageDialog(null,\"Sikeresen el lett mentve a játék állása\");\r\n            } catch (IOException ex) {\r\n                JOptionPane.showMessageDialog(null,ex.getMessage());\r\n            }\r\n        });\r\n        setSize(1200,800);\r\n        setResizable(false);\r\n        setLocationRelativeTo(null);\r\n        setDefaultCloseOperation(EXIT_ON_CLOSE);\r\n        setVisible(true);\r\n        //PanelValt();\r\n    }\r\n    public void JatekFuttat(){}\r\n\r\n\r\n    public void PanelValt() throws IOException {\r\n\r\n        menu.setVisible(false);\r\n\r\n        this.add(game);\r\n        //game.setVisible(true);\r\n        game.Start();\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Frame.java b/src/Frame.java
+--- a/src/Frame.java	(revision 449bf2ca38071dfabb60f7166ff8b260d6f656a5)
++++ b/src/Frame.java	(date 1685020156216)
+@@ -1,8 +1,6 @@
+ import javax.swing.*;
+ import java.awt.event.FocusEvent;
+ import java.awt.event.FocusListener;
+-import java.awt.event.KeyEvent;
+-import java.awt.event.KeyListener;
+ import java.io.IOException;
+ import java.util.Objects;
+ 
+@@ -46,73 +44,26 @@
+         menuStart.addActionListener(e -> {
+             try{
+                 game.getJatek().PalyaBetolt(menuFileBe.getText());
+-                setFocusable(true);
+                 PanelValt();
+             } catch (IOException ex) {
+                 JOptionPane.showMessageDialog(null,ex.getMessage());
+             }
+         });
+ 
+-        this.addKeyListener(new KeyListener() {
+-            @Override
+-            public void keyTyped(KeyEvent e) {
+-
+-            }
+-
+-            @Override
+-            public void keyPressed(KeyEvent e) {
+-                    if(e.getKeyChar()=='q')
+-                    {
+-                        game.m.jatekosMozgatas();
+-                        repaint();
+-                        repaint();
+-                    }
+-                if(e.getKeyChar()=='w')
+-                {
+-                    game.m.pumpatFelvesz();
+-                    repaint();
+-                    repaint();
+-                }
+-                if(e.getKeyChar()=='e')
+-                {
+-                    game.m.pumpatElhelyez();
+-                    repaint();
+-                    repaint();
+-                }
+-            }
+-
+-            @Override
+-            public void keyReleased(KeyEvent e) {
+-
+-            }
+-        });
+-        JButton gameMentes=game.getMentes();
+-        gameMentes.addActionListener(e -> {
+-            try {
+-                game.getJatek().Save("elmentett.txt");
+-                JOptionPane.showMessageDialog(null,"Sikeresen el lett mentve a játék állása");
+-            } catch (IOException ex) {
+-                JOptionPane.showMessageDialog(null,ex.getMessage());
+-            }
+-        });
+         setSize(1200,800);
+         setResizable(false);
+         setLocationRelativeTo(null);
+         setDefaultCloseOperation(EXIT_ON_CLOSE);
+         setVisible(true);
+-        //PanelValt();
++        PanelValt();
+     }
+     public void JatekFuttat(){}
+ 
+ 
+     public void PanelValt() throws IOException {
+-
+-        menu.setVisible(false);
+-
++        this.remove(menu);
+         this.add(game);
+-        //game.setVisible(true);
+         game.Start();
+-
+     }
+ 
+ }
+Index: src/JatekPanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.swing.*;\r\nimport java.awt.*;\r\nimport java.io.IOException;\r\nimport java.util.ArrayList;\r\n\r\npublic class JatekPanel extends JPanel {\r\n\r\n\r\n    private ArrayList<G>  elemek=new ArrayList<G>();\r\n    private ArrayList<GCso> csovek=new ArrayList<GCso>();\r\n\r\n    public ImageIcon kep = new ImageIcon(\"hatter.jpg\");\r\n    private Jatek j=new Jatek();\r\n\r\n    Menu m=new Menu();\r\n    private JButton mentes;\r\n\r\n    public JatekPanel() throws IOException {\r\n\r\n        setLayout(null);\r\n        //j.PalyaBetolt(\"palya.txt\");\r\n\r\n        mentes = new JButton(new ImageIcon(\"button_elmentes.png\"));\r\n        mentes.setBounds(1000,670,180,80);\r\n        mentes.setRolloverIcon(new ImageIcon(\"button_elmentes_roll.png\"));\r\n        mentes.setContentAreaFilled(false);\r\n        mentes.setFocusPainted(false);\r\n        mentes.setBorderPainted(false);\r\n\r\n        add(mentes);\r\n\r\n    }\r\n    public void  UjraRajzol(){\r\n\r\n        elemek.clear();\r\n        csovek.clear();\r\n        int cy=100;\r\n        int fy=100;\r\n        int px=600;\r\n        int py=200;\r\n        for(int i=0;i<j.getMezokHossz();i++)\r\n        {\r\n            if(j.getMezo(i).getId().startsWith(\"f\",0))\r\n            {\r\n                elemek.add(new GForras(20,fy,j.getMezo(i).getId()));\r\n                fy+=200;\r\n            }\r\n            if(j.getMezo(i).getId().startsWith(\"p\",0))\r\n            {\r\n                elemek.add(new GPumpa(px,py,j.getMezo(i).getId()));\r\n                if(py==400)\r\n                {\r\n                    px=400;\r\n                    py=200;\r\n                }\r\n                else\r\n                {\r\n                    py+=200;\r\n                }\r\n            }\r\n            if(j.getMezo(i).getId().startsWith(\"c\",0)&& !j.getMezo(i).getId().startsWith(\"cs\",0))\r\n            {\r\n                elemek.add(new GCiszterna(1000,cy,j.getMezo(i).getId()));\r\n                cy+=200;\r\n            }\r\n        }\r\n\r\n\r\n        for(int i=0;i<j.getMezokHossz();i++)\r\n        {\r\n            if(j.getMezo(i).getId().startsWith(\"cs\",0))\r\n            {\r\n                GCso temp=new GCso(null,null,j.getMezo(i).getId());\r\n                for (G n:elemek)\r\n                {\r\n                    if(j.getMezo(i).getSzomszed(0).getId().equals(n.getId()) && temp.getG1()==null)\r\n                    {\r\n                        temp.setG1(n);\r\n\r\n                    }\r\n                    if(j.getMezo(i).getSzomszed(1).getId().equals(n.getId()) && temp.getG2()==null )\r\n                    {\r\n                        temp.setG2(n);\r\n\r\n                    }\r\n                }\r\n                csovek.add(temp);\r\n            }\r\n        }\r\n        boolean talalt=false;\r\n\r\n        for(int i=0; i<j.getSzerelokHossz();i++)\r\n        {\r\n            GSzerelo temp=null;\r\n            for (G nk:elemek)\r\n            {\r\n                if(j.getSzerelok(i).getMezo().getId().equals(nk.getId()) &&!talalt)\r\n                {\r\n                    temp=new GSzerelo(nk.getX(),nk.getY(),j.getSzerelok(i).getNev());\r\n                    talalt=true;\r\n                }\r\n            }\r\n            if(!talalt)\r\n            {\r\n                for (GCso n:csovek)\r\n                {\r\n                    if(j.getSzerelok(i).getMezo().getId().equals(n.getId()) &&!talalt)\r\n                    {\r\n                        temp=new GSzerelo((n.getG1().getX()+n.getG2().getX())/2,((n.getG1().getY()+n.getG2().getY())/2)+20,j.getSzerelok(i).getNev());\r\n                        talalt=true;\r\n                    }\r\n                }\r\n            }\r\n            if(talalt)\r\n            {\r\n                //elemek.add(temp);\r\n            }\r\n        }\r\n        talalt=false;\r\n        for(int i=0; i<j.getNomadokHossz();i++)\r\n        {\r\n            GNomad temp=null;\r\n            for (G nk:elemek)\r\n            {\r\n                if(j.getNomad(i).getMezo().getId().equals(nk.getId()) &&!talalt)\r\n                {\r\n                    temp=new GNomad(nk.getX(),nk.getY(),j.getSzerelok(i).getNev());\r\n                    talalt=true;\r\n                }\r\n            }\r\n            if(!talalt)\r\n            {\r\n                for (GCso n:csovek)\r\n                {\r\n                    if(j.getNomad(i).getMezo().getId().equals(n.getId()) &&!talalt)\r\n                    {\r\n                        temp=new GNomad((n.getG1().getX()+n.getG2().getX())/2,((n.getG1().getY()+n.getG2().getY())/2)+20,j.getSzerelok(i).getNev());\r\n                        talalt=true;\r\n                    }\r\n                }\r\n            }\r\n            if(talalt)\r\n            {\r\n                //elemek.add(temp);\r\n            }\r\n        }\r\n        rajz();\r\n\r\n    }\r\n    public void rajz(){\r\n\r\n        boolean talalt=false;\r\n        for(int i=0; i<j.getSzerelokHossz();i++)\r\n        {\r\n            GSzerelo temp=null;\r\n            for (G nk:elemek)\r\n            {\r\n                if(j.getSzerelok(i).getMezo().getId().equals(nk.getId()) &&!talalt)\r\n                {\r\n                    temp=new GSzerelo(nk.getX(),nk.getY(),j.getSzerelok(i).getNev());\r\n                    System.out.println(nk.getId());\r\n                    talalt=true;\r\n                }\r\n            }\r\n            if(!talalt)\r\n            {\r\n                for (GCso n:csovek)\r\n                {\r\n                    if(j.getSzerelok(i).getMezo().getId().equals(n.getId()) &&!talalt)\r\n                    {\r\n                        temp=new GSzerelo((n.getG1().getX()+n.getG2().getX())/2,((n.getG1().getY()+n.getG2().getY())/2)+20,j.getSzerelok(i).getNev());\r\n                        talalt=true;\r\n                    }\r\n                }\r\n            }\r\n            if(talalt)\r\n            {\r\n                int t=-1;\r\n                for(int k=0;k<elemek.size();k++)\r\n                {\r\n                    if(elemek.get(k).getId().equals(temp.getId()))\r\n                    {\r\n                        t=k;\r\n                    }\r\n                }\r\n                if(t>=0)\r\n                {\r\n                    //System.out.println(elemek.get(t).getId());\r\n                    elemek.remove(t);\r\n\r\n                }\r\n                elemek.add(temp);\r\n            }\r\n            if(j.getSzerelok(i).getTartottCso()!=null)\r\n            {\r\n                for (GCso n:csovek)\r\n                {\r\n                    if(j.getSzerelok(i).getTartottCso().getId().equals(n.getId()) && j.getSzerelok(i).getTartottCso().getSzomszed(0).getId().equals(n.getG1().getId()))\r\n                    {\r\n                        n.setG2(temp);\r\n                    }\r\n                    else if(j.getSzerelok(i).getTartottCso().getId().equals(n.getId()) && j.getSzerelok(i).getTartottCso().getSzomszed(0).getId().equals(n.getG2().getId()))\r\n                    {\r\n                        n.setG1(temp);\r\n                    }\r\n                }\r\n            }\r\n        }\r\n\r\n        talalt=false;\r\n        for(int i=0; i<j.getNomadokHossz();i++)\r\n        {\r\n            GNomad temp1=null;\r\n            for (G nk:elemek)\r\n            {\r\n                if(j.getNomad(i).getMezo().getId().equals(nk.getId()) &&!talalt)\r\n                {\r\n                    temp1=new GNomad(nk.getX(),nk.getY(),j.getNomad(i).getNev());\r\n                    talalt=true;\r\n                }\r\n            }\r\n            if(!talalt)\r\n            {\r\n                for (GCso n:csovek)\r\n                {\r\n                    if(j.getNomad(i).getMezo().getId().equals(n.getId()) &&!talalt)\r\n                    {\r\n                        temp1=new GNomad((n.getG1().getX()+n.getG2().getX())/2,((n.getG1().getY()+n.getG2().getY())/2)+20,j.getNomad(i).getNev());\r\n                        talalt=true;\r\n                    }\r\n                }\r\n            }\r\n            if(talalt)\r\n            {\r\n                int t=-1;\r\n                for(int k=0;k<elemek.size();k++)\r\n                {\r\n                    if(elemek.get(k).getId().equals(temp1.getId()))\r\n                    {\r\n                        t=k;\r\n                    }\r\n                }\r\n                if(t>=0)\r\n                {\r\n                    elemek.remove(t);\r\n                }\r\n                elemek.add(temp1);\r\n            }\r\n        }\r\n\r\n        for(int i=0;i<j.getMezokHossz();i++)\r\n        {\r\n            talalt=false;\r\n            for(G n:elemek)\r\n            {\r\n                if(j.getMezo(i).getId().equals(n.getId()))\r\n                {\r\n                    talalt=true;\r\n                    break;\r\n                }\r\n            }\r\n            if(j.getMezo(i).getId().startsWith(\"cs\",0))\r\n            {\r\n                talalt=true;\r\n            }\r\n            if(!talalt)\r\n            {\r\n                String temp1=\"\";\r\n                if(j.getMezo(i).getSzomszed(0).getSzomszed(0).getId().equals(j.getMezo(i).getId()))\r\n                {\r\n                    temp1 = j.getMezo(i).getSzomszed(0).getSzomszed(1).getId();\r\n                    System.out.println(temp1);\r\n                }\r\n                else\r\n                {\r\n                    temp1 = j.getMezo(i).getSzomszed(0).getSzomszed(0).getId();\r\n                    System.out.println(temp1);\r\n                }\r\n\r\n                String temp2=\"\";\r\n                if(j.getMezo(i).getSzomszed(1).getSzomszed(0).getId().equals(j.getMezo(i).getId()))\r\n                {\r\n                    temp2 = j.getMezo(i).getSzomszed(1).getSzomszed(1).getId();\r\n                }\r\n                else\r\n                {\r\n                    temp2 = j.getMezo(i).getSzomszed(1).getSzomszed(0).getId();\r\n                }\r\n\r\n                G t1=null;\r\n                G t2=null;\r\n                for (G n:elemek)\r\n                {\r\n                    if(n.getId().equals(temp1))\r\n                    {\r\n                        t1=n;\r\n                    }\r\n                    else if(n.getId().equals(temp2))\r\n                    {\r\n                        t2=n;\r\n                    }\r\n                }\r\n                if(t1!=null && t2!=null)\r\n                {\r\n                    elemek.add(new GPumpa((t1.getX()+t2.getX())/2,(t1.getY()+t2.getY())/2,j.getMezo(i).getId()));\r\n                }\r\n            }\r\n        }\r\n        csovek.clear();\r\n        for(int i=0;i<j.getMezokHossz();i++)\r\n        {\r\n            if(j.getMezo(i).getId().startsWith(\"cs\",0))\r\n            {\r\n                GCso temp=new GCso(null,null,j.getMezo(i).getId());\r\n                for (G n:elemek)\r\n                {\r\n                    if(j.getMezo(i).getSzomszed(0).getId().equals(n.getId()) && temp.getG1()==null)\r\n                    {\r\n                        temp.setG1(n);\r\n\r\n                    }\r\n                    if(j.getMezo(i).getSzomszed(1).getId().equals(n.getId()) && temp.getG2()==null )\r\n                    {\r\n                        temp.setG2(n);\r\n\r\n                    }\r\n                }\r\n                csovek.add(temp);\r\n            }\r\n        }\r\n        for (GCso n:csovek)\r\n        {\r\n            for(int i=0;i<j.getMezokHossz();i++)\r\n            {\r\n                if(j.getMezo(i).getId().equals(n.getId()))\r\n                {\r\n                    if(j.getMezo(i).getVanViz()&&j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==0)\r\n                    {\r\n                        n.setColor(Color.blue);\r\n                    }\r\n                    else if(!j.getMezo(i).getVanViz()&&!j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==0)\r\n                    {\r\n                        n.setColor(new Color(252,77,67));\r\n                    }\r\n                    else if(j.getMezo(i).getVanViz()&&!j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==0)\r\n                    {\r\n                        n.setColor(new Color(163,12,3));\r\n                    }\r\n                    else if(!j.getMezo(i).getVanViz()&&j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==2)\r\n                    {\r\n                        n.setColor(new Color(122,252,125));\r\n                    }\r\n                    else if(!j.getMezo(i).getVanViz()&&j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==1)\r\n                    {\r\n                        n.setColor(Color.yellow);\r\n                    }\r\n                    else if(j.getMezo(i).getVanViz()&&j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==2)\r\n                    {\r\n                        n.setColor(new Color(2,91,4));\r\n                    }\r\n                    else if(j.getMezo(i).getVanViz()&&j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==1)\r\n                    {\r\n                        n.setColor(Color.orange);\r\n                    }\r\n                    else if(!j.getMezo(i).getVanViz()&&!j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==2)\r\n                    {\r\n                        n.setColor(new Color(95,62,16));\r\n                    }\r\n                    else if(!j.getMezo(i).getVanViz()&&!j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==1)\r\n                    {\r\n                        n.setColor(new Color(174,4,149));\r\n                    }\r\n                    else if(j.getMezo(i).getVanViz()&&!j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==2)\r\n                    {\r\n                        n.setColor(new Color(253,85,249));\r\n                    }\r\n                    else if(j.getMezo(i).getVanViz()&&!j.getMezo(i).getMukodik()&&j.getMezo(i).getAllapot()==1)\r\n                    {\r\n                        n.setColor(Color.black);\r\n                    }\r\n                    else\r\n                    {\r\n                        n.setColor(Color.lightGray);\r\n                    }\r\n                }\r\n\r\n            }\r\n            n.Draw(0,0,this.getGraphics());\r\n        }\r\n\r\n        for (G n:elemek)\r\n        {\r\n            n.Draw(n.getX(),n.getY(),this.getGraphics());\r\n        }\r\n\r\n    }\r\n    public void Start() throws IOException {\r\n        UjraRajzol();\r\n        m.j=j;\r\n    }\r\n\r\n    public void Exit(){}\r\n\r\n\r\n    public Jatek getJatek() {\r\n        return j;\r\n    }\r\n    public void paintComponent(Graphics g){\r\n        super.paintComponent(g);\r\n        g.drawImage(kep.getImage(),0,0,null);\r\n        rajz();\r\n    }\r\n    public JButton getMentes()\r\n    {\r\n        return mentes;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/JatekPanel.java b/src/JatekPanel.java
+--- a/src/JatekPanel.java	(revision 449bf2ca38071dfabb60f7166ff8b260d6f656a5)
++++ b/src/JatekPanel.java	(date 1685020159682)
+@@ -12,13 +12,12 @@
+     public ImageIcon kep = new ImageIcon("hatter.jpg");
+     private Jatek j=new Jatek();
+ 
+-    Menu m=new Menu();
+     private JButton mentes;
+ 
+     public JatekPanel() throws IOException {
+ 
+         setLayout(null);
+-        //j.PalyaBetolt("palya.txt");
++        j.PalyaBetolt("palya.txt");
+ 
+         mentes = new JButton(new ImageIcon("button_elmentes.png"));
+         mentes.setBounds(1000,670,180,80);
+@@ -30,8 +29,8 @@
+         add(mentes);
+ 
+     }
+-    public void  UjraRajzol(){
+-
++    public synchronized void  UjraRajzol()
++    {
+         elemek.clear();
+         csovek.clear();
+         int cy=100;
+@@ -113,7 +112,7 @@
+             }
+             if(talalt)
+             {
+-                //elemek.add(temp);
++                elemek.add(temp);
+             }
+         }
+         talalt=false;
+@@ -141,13 +140,13 @@
+             }
+             if(talalt)
+             {
+-                //elemek.add(temp);
++                elemek.add(temp);
+             }
+         }
+         rajz();
+-
+     }
+-    public void rajz(){
++    public void rajz()
++    {
+ 
+         boolean talalt=false;
+         for(int i=0; i<j.getSzerelokHossz();i++)
+@@ -158,7 +157,6 @@
+                 if(j.getSzerelok(i).getMezo().getId().equals(nk.getId()) &&!talalt)
+                 {
+                     temp=new GSzerelo(nk.getX(),nk.getY(),j.getSzerelok(i).getNev());
+-                    System.out.println(nk.getId());
+                     talalt=true;
+                 }
+             }
+@@ -175,20 +173,6 @@
+             }
+             if(talalt)
+             {
+-                int t=-1;
+-                for(int k=0;k<elemek.size();k++)
+-                {
+-                    if(elemek.get(k).getId().equals(temp.getId()))
+-                    {
+-                        t=k;
+-                    }
+-                }
+-                if(t>=0)
+-                {
+-                    //System.out.println(elemek.get(t).getId());
+-                    elemek.remove(t);
+-
+-                }
+                 elemek.add(temp);
+             }
+             if(j.getSzerelok(i).getTartottCso()!=null)
+@@ -210,12 +194,12 @@
+         talalt=false;
+         for(int i=0; i<j.getNomadokHossz();i++)
+         {
+-            GNomad temp1=null;
++            GNomad temp=null;
+             for (G nk:elemek)
+             {
+                 if(j.getNomad(i).getMezo().getId().equals(nk.getId()) &&!talalt)
+                 {
+-                    temp1=new GNomad(nk.getX(),nk.getY(),j.getNomad(i).getNev());
++                    temp=new GNomad(nk.getX(),nk.getY(),j.getSzerelok(i).getNev());
+                     talalt=true;
+                 }
+             }
+@@ -225,32 +209,19 @@
+                 {
+                     if(j.getNomad(i).getMezo().getId().equals(n.getId()) &&!talalt)
+                     {
+-                        temp1=new GNomad((n.getG1().getX()+n.getG2().getX())/2,((n.getG1().getY()+n.getG2().getY())/2)+20,j.getNomad(i).getNev());
++                        temp=new GNomad((n.getG1().getX()+n.getG2().getX())/2,((n.getG1().getY()+n.getG2().getY())/2)+20,j.getSzerelok(i).getNev());
+                         talalt=true;
+                     }
+                 }
+             }
+             if(talalt)
+             {
+-                int t=-1;
+-                for(int k=0;k<elemek.size();k++)
+-                {
+-                    if(elemek.get(k).getId().equals(temp1.getId()))
+-                    {
+-                        t=k;
+-                    }
+-                }
+-                if(t>=0)
+-                {
+-                    elemek.remove(t);
+-                }
+-                elemek.add(temp1);
++                elemek.add(temp);
+             }
+         }
+-
++        talalt=false;
+         for(int i=0;i<j.getMezokHossz();i++)
+         {
+-            talalt=false;
+             for(G n:elemek)
+             {
+                 if(j.getMezo(i).getId().equals(n.getId()))
+@@ -265,28 +236,18 @@
+             }
+             if(!talalt)
+             {
+-                String temp1="";
++                String temp1=null;
+                 if(j.getMezo(i).getSzomszed(0).getSzomszed(0).getId().equals(j.getMezo(i).getId()))
+-                {
++                {}
++                else {
+                     temp1 = j.getMezo(i).getSzomszed(0).getSzomszed(1).getId();
+-                    System.out.println(temp1);
+                 }
+-                else
+-                {
+-                    temp1 = j.getMezo(i).getSzomszed(0).getSzomszed(0).getId();
+-                    System.out.println(temp1);
+-                }
+-
+-                String temp2="";
++                String temp2=null;
+                 if(j.getMezo(i).getSzomszed(1).getSzomszed(0).getId().equals(j.getMezo(i).getId()))
+-                {
++                {}
++                else {
+                     temp2 = j.getMezo(i).getSzomszed(1).getSzomszed(1).getId();
+                 }
+-                else
+-                {
+-                    temp2 = j.getMezo(i).getSzomszed(1).getSzomszed(0).getId();
+-                }
+-
+                 G t1=null;
+                 G t2=null;
+                 for (G n:elemek)
+@@ -306,28 +267,7 @@
+                 }
+             }
+         }
+-        csovek.clear();
+-        for(int i=0;i<j.getMezokHossz();i++)
+-        {
+-            if(j.getMezo(i).getId().startsWith("cs",0))
+-            {
+-                GCso temp=new GCso(null,null,j.getMezo(i).getId());
+-                for (G n:elemek)
+-                {
+-                    if(j.getMezo(i).getSzomszed(0).getId().equals(n.getId()) && temp.getG1()==null)
+-                    {
+-                        temp.setG1(n);
+ 
+-                    }
+-                    if(j.getMezo(i).getSzomszed(1).getId().equals(n.getId()) && temp.getG2()==null )
+-                    {
+-                        temp.setG2(n);
+-
+-                    }
+-                }
+-                csovek.add(temp);
+-            }
+-        }
+         for (GCso n:csovek)
+         {
+             for(int i=0;i<j.getMezokHossz();i++)
+@@ -387,31 +327,24 @@
+             }
+             n.Draw(0,0,this.getGraphics());
+         }
+-
+         for (G n:elemek)
+         {
+             n.Draw(n.getX(),n.getY(),this.getGraphics());
+         }
+-
+     }
+-    public void Start() throws IOException {
++    public void Start(){
+         UjraRajzol();
+-        m.j=j;
+     }
+ 
+     public void Exit(){}
+ 
+ 
+-    public Jatek getJatek() {
++    public Jatek getJatek(){
+         return j;
+-    }
++
+     public void paintComponent(Graphics g){
+         super.paintComponent(g);
+         g.drawImage(kep.getImage(),0,0,null);
+         rajz();
+     }
+-    public JButton getMentes()
+-    {
+-        return mentes;
+-    }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"c78c06fe-fb10-4f75-9822-2284a2268f5c\" name=\"Changes\" comment=\"Valid MenuPanel, Frame osztály :)\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__14_13__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__14_13__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_45__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_45__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_46__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_46__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__24__21_45__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__24__21_45__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Frame.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Frame.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/JatekPanel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/JatekPanel.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Menu.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Menu.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/ciszterna.png\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ciszterna.png\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/nomad.png\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/nomad.png\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/szerelo.png\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/szerelo.png\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_TAGS\">\r\n      <GitPushTagMode>\r\n        <option name=\"argument\" value=\"--tags\" />\r\n        <option name=\"title\" value=\"All\" />\r\n      </GitPushTagMode>\r\n    </option>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2NzxzPU61nAXxniEEPwnDynIEfU\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/ninaj/Documents/BME/4_felev/Szoftprojekt lab/6. Skeleton elkészítés/UJ_SIVATAG&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\ninaj\\Documents\\BME\\4_felev\\Szoftprojekt lab\\6. Skeleton elkészítés\\UJ_SIVATAG\" />\r\n      <recent name=\"C:\\Users\\ninaj\\Documents\\BME\\4_felev\\Szoftprojekt lab\\6. Skeleton elkészítés\\UJ_SIVATAG\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"Skeleton\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"c78c06fe-fb10-4f75-9822-2284a2268f5c\" name=\"Changes\" comment=\"\" />\r\n      <created>1680680976691</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1680680976691</updated>\r\n      <workItem from=\"1680680978340\" duration=\"376000\" />\r\n      <workItem from=\"1680693931942\" duration=\"155000\" />\r\n      <workItem from=\"1680694096733\" duration=\"1039000\" />\r\n      <workItem from=\"1680695153418\" duration=\"1865000\" />\r\n      <workItem from=\"1681064377361\" duration=\"91000\" />\r\n      <workItem from=\"1681470980995\" duration=\"1126000\" />\r\n      <workItem from=\"1681578429810\" duration=\"6238000\" />\r\n      <workItem from=\"1681585737123\" duration=\"2892000\" />\r\n      <workItem from=\"1681633286637\" duration=\"666000\" />\r\n      <workItem from=\"1681634521665\" duration=\"90000\" />\r\n      <workItem from=\"1681634639058\" duration=\"1156000\" />\r\n      <workItem from=\"1681636080904\" duration=\"4222000\" />\r\n      <workItem from=\"1682532488661\" duration=\"575000\" />\r\n      <workItem from=\"1682535749979\" duration=\"49000\" />\r\n      <workItem from=\"1682775911855\" duration=\"6458000\" />\r\n      <workItem from=\"1682869788770\" duration=\"833000\" />\r\n      <workItem from=\"1684934297723\" duration=\"15708000\" />\r\n      <workItem from=\"1684950724232\" duration=\"6404000\" />\r\n      <workItem from=\"1684934297723\" duration=\"8257000\" />\r\n      <workItem from=\"1684998504489\" duration=\"1255000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Sivatag\">\r\n      <created>1680681178919</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680681178919</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Sivatag\">\r\n      <created>1680681289795</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680681289795</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Jatek nélküli Csofogado objektumok\">\r\n      <created>1680948548839</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680948548839</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Megcsináltam a menüt.\">\r\n      <created>1681472108131</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681472108131</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Csofogado fuggvenyek javitas, szep kiiras + Szerelo TartottCso setter/getter\">\r\n      <created>1681583805567</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681583805567</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Csofogado fuggvenyek javitas, szep kiiras + Szerelo TartottCso setter/getter\">\r\n      <created>1681585401831</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681585401831</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Csofogado fuggvenyek javitas, szep kiiras + Szerelo TartottCso setter/getter\">\r\n      <created>1681585446464</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681585446464</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Cso atiras, Pumpa/Csofogado konstruktor javítás,\">\r\n      <created>1681589489654</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681589489654</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Jatek kesz\">\r\n      <created>1681634931241</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681634931241</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Jatek vége jav\">\r\n      <created>1681635618464</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681635618464</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Új osztályok felvétele grafikus felülethez\">\r\n      <created>1684931096603</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1684931096604</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Új osztályok felvétele grafikus felülethez\">\r\n      <created>1684942308833</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1684942308833</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Új osztályok felvétele grafikus felülethez\">\r\n      <created>1684942821732</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1684942821732</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Valid MenuPanel, Frame osztály :)\">\r\n      <created>1684955584189</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1684955584189</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"15\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Sivatag\" />\r\n    <MESSAGE value=\"Mezo, Cso es Mezo teszter osztaly\" />\r\n    <MESSAGE value=\"Jatek nélküli Csofogado objektumok\" />\r\n    <MESSAGE value=\"Megcsináltam a menüt.\" />\r\n    <MESSAGE value=\"Csofogado fuggvenyek javitas, szep kiiras\" />\r\n    <MESSAGE value=\"Csofogado fuggvenyek javitas, szep kiiras + Szerelo TartottCso setter/getter\" />\r\n    <MESSAGE value=\"Cso atiras, Pumpa/Csofogado konstruktor javítás,\" />\r\n    <MESSAGE value=\"Jatek kesz\" />\r\n    <MESSAGE value=\"Jatek vége jav\" />\r\n    <MESSAGE value=\"Új osztályok felvétele grafikus felülethez\" />\r\n    <MESSAGE value=\"Valid MenuPanel, Frame osztály :)\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Valid MenuPanel, Frame osztály :)\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/UJ_SIVATAG$Main.ic\" NAME=\"Main Coverage Results\" MODIFIED=\"1681641183210\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 449bf2ca38071dfabb60f7166ff8b260d6f656a5)
++++ b/.idea/workspace.xml	(date 1685020160657)
+@@ -4,18 +4,15 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
++
++
+     <list default="true" id="c78c06fe-fb10-4f75-9822-2284a2268f5c" name="Changes" comment="Valid MenuPanel, Frame osztály :)">
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__14_13__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__14_13__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_45__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_45__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_46__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_46__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__24__21_45__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__24__21_45__Changes_.xml" afterDir="false" />
++
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
++
+       <change beforePath="$PROJECT_DIR$/src/JatekPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JatekPanel.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ciszterna.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/ciszterna.png" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/nomad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/nomad.png" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/szerelo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/szerelo.png" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -112,10 +109,14 @@
+       <workItem from="1682535749979" duration="49000" />
+       <workItem from="1682775911855" duration="6458000" />
+       <workItem from="1682869788770" duration="833000" />
++
+       <workItem from="1684934297723" duration="15708000" />
+       <workItem from="1684950724232" duration="6404000" />
++
+       <workItem from="1684934297723" duration="8257000" />
++
+       <workItem from="1684998504489" duration="1255000" />
++
+     </task>
+     <task id="LOCAL-00001" summary="Sivatag">
+       <created>1680681178919</created>
+@@ -201,6 +202,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1684942308833</updated>
+     </task>
++
+     <task id="LOCAL-00013" summary="Új osztályok felvétele grafikus felülethez">
+       <created>1684942821732</created>
+       <option name="number" value="00013" />
+@@ -216,6 +218,7 @@
+       <updated>1684955584189</updated>
+     </task>
+     <option name="localTasksCounter" value="15" />
++
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -255,8 +258,10 @@
+     <MESSAGE value="Jatek kesz" />
+     <MESSAGE value="Jatek vége jav" />
+     <MESSAGE value="Új osztályok felvétele grafikus felülethez" />
++
+     <MESSAGE value="Valid MenuPanel, Frame osztály :)" />
+     <option name="LAST_COMMIT_MESSAGE" value="Valid MenuPanel, Frame osztály :)" />
++
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/UJ_SIVATAG$Main.ic" NAME="Main Coverage Results" MODIFIED="1681641183210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

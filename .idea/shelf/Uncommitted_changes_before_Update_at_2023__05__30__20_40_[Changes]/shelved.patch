@@ -1,0 +1,22 @@
+Index: palya.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>j,0,0,5\r\ncs,cs1,1,0\r\ncs,cs2,1,0\r\ncs,cs3,1,2\r\ncs,cs4,1,0\r\ncs,cs5,1,0\r\ncs,cs6,1,0\r\nc,c1,cs1\r\np,p1,cs1;cs2;cs3,cs3,cs1,1\r\np,p2,cs2;cs6,cs6,cs2,1\r\np,p3,cs3;cs4;cs6;cs5,cs4,cs3,1\r\nf,f1,cs4\r\nf,f2,cs5\r\ns,Felix,-1,p1,0\r\ns,Aurelio,-1,p2,0\r\nn,Ralf,c1\r\nn,Leonardo,cs1
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/palya.txt b/palya.txt
+--- a/palya.txt	(revision 1b610a8e0c7f7aa7a1a69eef523f139436ae3ed0)
++++ b/palya.txt	(date 1685398189952)
+@@ -6,9 +6,10 @@
+ cs,cs5,1,0
+ cs,cs6,1,0
+ c,c1,cs1
++c,c2,cs3
+ p,p1,cs1;cs2;cs3,cs3,cs1,1
+ p,p2,cs2;cs6,cs6,cs2,1
+-p,p3,cs3;cs4;cs6;cs5,cs4,cs3,1
++p,p3,cs4;cs6;cs5,cs4,cs6,1
+ f,f1,cs4
+ f,f2,cs5
+ s,Felix,-1,p1,0
