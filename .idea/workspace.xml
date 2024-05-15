@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c78c06fe-fb10-4f75-9822-2284a2268f5c" name="Changes" comment="A G s objektumok kommentezve és 2 függvény a JatekPanel ben is">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manual_test/~WRL3697.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manual_test/Manual_test.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Manual_test/Manual_test.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +65,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/ninaj/Documents/BME/4_felev/Szoftprojekt lab/6. Skeleton elkészítés/UJ_SIVATAG",
+    "git-widget-placeholder": "manual__test",
+    "last_opened_file_path": "C:/Users/gergo/School/6_Felev/IET/iet-hf-2024-team01",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,6 +126,7 @@
       <workItem from="1685302684540" duration="5073000" />
       <workItem from="1685392666481" duration="3751000" />
       <workItem from="1715764334288" duration="1557000" />
+      <workItem from="1715771486241" duration="3521000" />
     </task>
     <task id="LOCAL-00001" summary="Sivatag">
       <created>1680681178919</created>
