@@ -5,7 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c78c06fe-fb10-4f75-9822-2284a2268f5c" name="Changes" comment="A G s objektumok kommentezve és 2 függvény a JatekPanel ben is">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/palya.txt" beforeDir="false" afterPath="$PROJECT_DIR$/palya.txt" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skeleton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Skeleton.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ciszterna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ciszterna.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Csofogado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Csofogado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Forras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/G.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/G.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GCiszterna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GCiszterna.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GCso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GCso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GForras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GForras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GNomad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GNomad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GPumpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GPumpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GSzellem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GSzellem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GSzerelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GSzerelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jatek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jatek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JatekPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JatekPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jatekos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jatekos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mezo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Mezo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Nomad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Nomad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pumpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pumpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rajzolhato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rajzolhato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Szerelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Szerelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ciszterna.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ciszterna.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/forras.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forras.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nomad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nomad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/szerelo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/szerelo.png" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +97,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -76,6 +115,26 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "manual__test",
+    "last_opened_file_path": "C:/Users/gergo/School/6_Felev/IET/iet-hf-2024-team01",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "proofread",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> Stashed changes
   }
 }</component>
   <component name="RecentsManager">
@@ -124,6 +183,12 @@
       <workItem from="1685217289225" duration="6149000" />
       <workItem from="1685302684540" duration="5073000" />
       <workItem from="1685392666481" duration="3751000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1715764334288" duration="1557000" />
+      <workItem from="1715771486241" duration="3521000" />
+      <workItem from="1715956708873" duration="162000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Sivatag">
       <created>1680681178919</created>
