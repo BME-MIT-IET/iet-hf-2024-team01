@@ -5,60 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c78c06fe-fb10-4f75-9822-2284a2268f5c" name="Changes" comment="A G s objektumok kommentezve és 2 függvény a JatekPanel ben is">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__14_13_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__14_13__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_45_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_45__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_46_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__24__21_46__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__25__15_10_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__25__15_10__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__25__15_14_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__25__15_14__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__25__9_41_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023__05__25__9_41__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__24__21_45_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__24__21_45__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__25__15_09_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__25__15_09__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__25__9_42_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__25__9_42__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__30__20_40_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__05__30__20_40__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ciszterna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ciszterna.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Csofogado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Csofogado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Forras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Forras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/G.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/G.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GCiszterna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GCiszterna.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GCso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GCso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GForras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GForras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GNomad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GNomad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GPumpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GPumpa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GSzellem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GSzellem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GSzerelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GSzerelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Jatek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jatek.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JatekPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JatekPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Jatekos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Jatekos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mezo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Mezo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Nomad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Nomad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pumpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pumpa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rajzolhato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rajzolhato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Szerelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Szerelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ciszterna.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ciszterna.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/forras.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/forras.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nomad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nomad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/szerelo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/szerelo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,9 +53,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2NzxzPU61nAXxniEEPwnDynIEfU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -125,7 +74,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "manual__code__review",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Tep Oli/6_felev/IET_HF/HF/proba2/iet-hf-2024-team01",
     "node.js.detected.package.eslint": "true",
@@ -147,7 +96,7 @@
       <recent name="C:\Users\ninaj\Documents\BME\4_felev\Szoftprojekt lab\6. Skeleton elkészítés\UJ_SIVATAG\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="iet-hf-2024-team01" />
@@ -209,6 +158,7 @@
       <workItem from="1685302684540" duration="5073000" />
       <workItem from="1685392666481" duration="3751000" />
       <workItem from="1714820134865" duration="2852000" />
+      <workItem from="1716308072708" duration="132000" />
     </task>
     <task id="LOCAL-00001" summary="Sivatag">
       <created>1680681178919</created>
