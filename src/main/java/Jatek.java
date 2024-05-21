@@ -344,7 +344,7 @@ public class Jatek {
                     line = br.readLine();
                 }
             } catch (FileNotFoundException e) {
-                e.printStackTrace();
+                System.out.println("Nem található a fájl!");
             }
         }
     }
@@ -448,7 +448,7 @@ public class Jatek {
                 fileWriter.write("\n");
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Nem található a fájl!");
         }
     }
     /**
