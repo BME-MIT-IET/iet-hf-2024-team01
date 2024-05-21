@@ -235,123 +235,117 @@ public class Jatek {
             nomadok.get(0).setMezo(mezok.get(0));
         }
         else{
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            String line = br.readLine();
-            String[] lineStr;
-            lineStr = line.split(",");
-            szereloPontok = Integer.parseInt(lineStr[1]);
-            nomadPontok = Integer.parseInt(lineStr[2]);
-            korok = Integer.parseInt(lineStr[3]);
-            line = br.readLine();
-            ArrayList<Cso> csovek = new ArrayList<>();
-            while (line != null) {
+            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+                String line = br.readLine();
+                String[] lineStr;
                 lineStr = line.split(",");
-                if(lineStr[0].equals("cs")){
-                    Cso cs = new Cso(lineStr[1]);
-                    if(lineStr[2].equals("1")){
-                        cs.setMukodik(true);
-                    }
-                    else if(lineStr[2].equals("0")){
-                        cs.setMukodik(false);
-                    }
-                    cs.setAllapot(Integer.parseInt(lineStr[3]));
-                    mezok.add(cs);
-                    csovek.add(cs);
-                }
-                else if(lineStr[0].equals("c") && !lineStr[0].equals("cs")){
-                    Ciszterna c = new Ciszterna(10, lineStr[1]);
-                    String[] lineStrSplitted = lineStr[2].split(";");
-                    for(int j = 0; j < lineStrSplitted.length; j++){
-                        for(int i = 0; i < csovek.size(); i++){
-                            if(csovek.get(i).getId().equals(lineStrSplitted[j])){
-                                c.SzomszedFelvesz(mezok.get(i));
-                                mezok.get(i).SzomszedFelvesz(c);
+                szereloPontok = Integer.parseInt(lineStr[1]);
+                nomadPontok = Integer.parseInt(lineStr[2]);
+                korok = Integer.parseInt(lineStr[3]);
+                line = br.readLine();
+                ArrayList<Cso> csovek = new ArrayList<>();
+                while (line != null) {
+                    lineStr = line.split(",");
+                    if (lineStr[0].equals("cs")) {
+                        Cso cs = new Cso(lineStr[1]);
+                        if (lineStr[2].equals("1")) {
+                            cs.setMukodik(true);
+                        } else if (lineStr[2].equals("0")) {
+                            cs.setMukodik(false);
+                        }
+                        cs.setAllapot(Integer.parseInt(lineStr[3]));
+                        mezok.add(cs);
+                        csovek.add(cs);
+                    } else if (lineStr[0].equals("c") && !lineStr[0].equals("cs")) {
+                        Ciszterna c = new Ciszterna(10, lineStr[1]);
+                        String[] lineStrSplitted = lineStr[2].split(";");
+                        for (int j = 0; j < lineStrSplitted.length; j++) {
+                            for (int i = 0; i < csovek.size(); i++) {
+                                if (csovek.get(i).getId().equals(lineStrSplitted[j])) {
+                                    c.SzomszedFelvesz(mezok.get(i));
+                                    mezok.get(i).SzomszedFelvesz(c);
+                                }
                             }
                         }
-                    }
-                    mezok.add(c);
-                }
-                else if(lineStr[0].equals("p")){
-                    Cso tempBe = null;
-                    Cso tempKi = null;
-                    for(int i = 0; i < csovek.size(); i++){
-                        if(csovek.get(i).getId().equals(lineStr[3])){
-                            tempBe = (Cso)mezok.get(i);
-                        }
-                        if(csovek.get(i).getId().equals(lineStr[4])){
-                            tempKi = (Cso)mezok.get(i);
-                        }
-                    }
-                    Pumpa p = new Pumpa(4, tempBe, tempKi, lineStr[1]);
-                    String[] lineStrSplitted = lineStr[2].split(";");
-                    for(int j = 0; j < lineStrSplitted.length; j++){
-                        for(int i = 0; i < mezok.size(); i++){
-                            if(mezok.get(i).getId().equals(lineStrSplitted[j])&&!tempBe.getId().equals(lineStrSplitted[j])
-                                    &&!tempKi.getId().equals(lineStrSplitted[j])){
-                                p.SzomszedFelvesz(mezok.get(i));
-                                mezok.get(i).SzomszedFelvesz(p);
-                                break;
+                        mezok.add(c);
+                    } else if (lineStr[0].equals("p")) {
+                        Cso tempBe = null;
+                        Cso tempKi = null;
+                        for (int i = 0; i < csovek.size(); i++) {
+                            if (csovek.get(i).getId().equals(lineStr[3])) {
+                                tempBe = (Cso) mezok.get(i);
+                            }
+                            if (csovek.get(i).getId().equals(lineStr[4])) {
+                                tempKi = (Cso) mezok.get(i);
                             }
                         }
-                    }
-                    if(lineStr[5].equals("0")) p.setMukodik(false);
-                    mezok.add(p);
-                }
-                else if(lineStr[0].equals("f")){
-                    Forras f = new Forras(10,lineStr[1]);
-                    String[] lineStrSplitted = lineStr[2].split(";");
-                    for(int j = 0; j < lineStrSplitted.length; j++){
-                        for(int i = 0; i < csovek.size(); i++){
-                            if(csovek.get(i).getId().equals(lineStrSplitted[j])){
-                                f.SzomszedFelvesz(mezok.get(i));
-                                mezok.get(i).SzomszedFelvesz(f);
+                        Pumpa p = new Pumpa(4, tempBe, tempKi, lineStr[1]);
+                        String[] lineStrSplitted = lineStr[2].split(";");
+                        for (int j = 0; j < lineStrSplitted.length; j++) {
+                            for (int i = 0; i < mezok.size(); i++) {
+                                if (mezok.get(i).getId().equals(lineStrSplitted[j]) && !tempBe.getId().equals(lineStrSplitted[j])
+                                        && !tempKi.getId().equals(lineStrSplitted[j])) {
+                                    p.SzomszedFelvesz(mezok.get(i));
+                                    mezok.get(i).SzomszedFelvesz(p);
+                                    break;
+                                }
                             }
                         }
-                    }
-                    mezok.add(f);
-                }
-                else if(lineStr[0].equals("s")){
-                    Szerelo s = new Szerelo(lineStr[1]);
-                    for(int i = 0; i < mezok.size(); i++){
-                        if(mezok.get(i).getId().equals(lineStr[3])){
-                            s.setMezo(mezok.get(i));
-                            s.Mozog(mezok.get(i));
+                        if (lineStr[5].equals("0")) p.setMukodik(false);
+                        mezok.add(p);
+                    } else if (lineStr[0].equals("f")) {
+                        Forras f = new Forras(10, lineStr[1]);
+                        String[] lineStrSplitted = lineStr[2].split(";");
+                        for (int j = 0; j < lineStrSplitted.length; j++) {
+                            for (int i = 0; i < csovek.size(); i++) {
+                                if (csovek.get(i).getId().equals(lineStrSplitted[j])) {
+                                    f.SzomszedFelvesz(mezok.get(i));
+                                    mezok.get(i).SzomszedFelvesz(f);
+                                }
+                            }
                         }
-                        if(mezok.get(i).getId().equals(lineStr[2])){
-                            s.setTartottCso((Cso)mezok.get(i));
-                        }
-                    }
-                    if(lineStr[2].equals("-1")){
-                        s.setTartottCso(null);
-                    }
-                    else {
+                        mezok.add(f);
+                    } else if (lineStr[0].equals("s")) {
+                        Szerelo s = new Szerelo(lineStr[1]);
                         for (int i = 0; i < mezok.size(); i++) {
+                            if (mezok.get(i).getId().equals(lineStr[3])) {
+                                s.setMezo(mezok.get(i));
+                                s.Mozog(mezok.get(i));
+                            }
                             if (mezok.get(i).getId().equals(lineStr[2])) {
                                 s.setTartottCso((Cso) mezok.get(i));
                             }
                         }
-                    }
-                    if(lineStr[4].equals("0")){
-                        s.setVanPumpa(false);
-                    }
-                    else if(lineStr[4].equals("1")){
-                        s.setVanPumpa(true);
-                    }
-                    szerelok.add(s);
-                }
-                else if(lineStr[0].equals("n")){
-                    Nomad n = new Nomad(lineStr[1]);
-                    for(int i = 0; i < mezok.size(); i++) {
-                        if (mezok.get(i).getId().equals(lineStr[2])) {
-                            n.setMezo(mezok.get(i));
-                            n.Mozog(mezok.get(i));
+                        if (lineStr[2].equals("-1")) {
+                            s.setTartottCso(null);
+                        } else {
+                            for (int i = 0; i < mezok.size(); i++) {
+                                if (mezok.get(i).getId().equals(lineStr[2])) {
+                                    s.setTartottCso((Cso) mezok.get(i));
+                                }
+                            }
                         }
+                        if (lineStr[4].equals("0")) {
+                            s.setVanPumpa(false);
+                        } else if (lineStr[4].equals("1")) {
+                            s.setVanPumpa(true);
+                        }
+                        szerelok.add(s);
+                    } else if (lineStr[0].equals("n")) {
+                        Nomad n = new Nomad(lineStr[1]);
+                        for (int i = 0; i < mezok.size(); i++) {
+                            if (mezok.get(i).getId().equals(lineStr[2])) {
+                                n.setMezo(mezok.get(i));
+                                n.Mozog(mezok.get(i));
+                            }
+                        }
+                        nomadok.add(n);
                     }
-                    nomadok.add(n);
+                    line = br.readLine();
                 }
-                line = br.readLine();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
             }
-            br.close();
         }
     }
 
@@ -365,120 +359,97 @@ public class Jatek {
     void Save(String file) throws IOException {
         int mukodik;
         File myFile = new File(file);
-        FileWriter fileWriter = new FileWriter(myFile);
-        fileWriter.write("j" + ","+szereloPontok+"," + nomadPontok + "," + korok + "\n");
-        //végig megy a mezok lista osszes elemén, és a típusától függően (cső/pumpa/ciszterna stb.) kiírja a fájlba a megfelelő adatokat
-        for (int i=0;i < mezok.size();i++) {
-            if (mezok.get(i).getId().startsWith("cs", 0)) {
-                if (mezok.get(i).getMukodik()) {
+        try (FileWriter fileWriter = new FileWriter(myFile)) {
+            fileWriter.write("j" + "," + szereloPontok + "," + nomadPontok + "," + korok + "\n");
+            //végig megy a mezok lista osszes elemén, és a típusától függően (cső/pumpa/ciszterna stb.) kiírja a fájlba a megfelelő adatokat
+            for (int i = 0; i < mezok.size(); i++) {
+                if (mezok.get(i).getId().startsWith("cs", 0)) {
+                    if (mezok.get(i).getMukodik()) {
+                        mukodik = 1;
+                    } else {
+                        mukodik = 0;
+                    }
+                    fileWriter.write("cs" + "," + mezok.get(i).getId() + "," + mukodik + "," + mezok.get(i).getAllapot());
+                    fileWriter.write("\n");
+                }
+            }
+            for (int i = 0; i < mezok.size(); i++) {
+                if (mezok.get(i).getId().startsWith("c", 0) && !mezok.get(i).getId().startsWith("cs", 0)) {
+                    fileWriter.write("c" + "," + mezok.get(i).getId() + ",");
+                    for (int k = 0; k < mezok.get(i).getSzomszedokHossz(); k++) {
+                        fileWriter.write(mezok.get(i).getSzomszed(k).getId());
+                        if (k < mezok.get(i).getSzomszedokHossz() - 1) {
+                            fileWriter.write(";");
+                        } else if (mezok.get(i).getSzomszedokHossz() == 1) {
+
+                        } else {
+                            fileWriter.write(",");
+                        }
+                    }
+                    fileWriter.write("\n");
+                }
+            }
+            for (int i = 0; i < mezok.size(); i++) {
+                if (mezok.get(i).getId().startsWith("p", 0)) {
+                    if (mezok.get(i).getMukodik()) {
+                        mukodik = 1;
+                    } else {
+                        mukodik = 0;
+                    }
+                    fileWriter.write("p" + "," + mezok.get(i).getId() + ",");
+
+                    for (int k = 0; k < mezok.get(i).getSzomszedokHossz(); k++) {
+                        fileWriter.write(mezok.get(i).getSzomszed(k).getId());
+                        if (k < mezok.get(i).getSzomszedokHossz() - 1) {
+                            fileWriter.write(";");
+                        } else {
+                            fileWriter.write(",");
+                        }
+                    }
+                    fileWriter.write(mezok.get(i).GetHonnan().getId() + "," + mezok.get(i).GetHova().getId() + "," + mukodik);
+                    fileWriter.write("\n");
+                }
+            }
+            for (int i = 0; i < mezok.size(); i++) {
+                if (mezok.get(i).getId().startsWith("f", 0)) {
+                    fileWriter.write("f" + "," + mezok.get(i).getId() + ",");
+                    for (int k = 0; k < mezok.get(i).getSzomszedokHossz(); k++) {
+                        fileWriter.write(mezok.get(i).getSzomszed(k).getId());
+                        if (k < mezok.get(i).getSzomszedokHossz() - 1) {
+                            fileWriter.write(";");
+                        } else if (mezok.get(i).getSzomszedokHossz() == 1) {
+
+                        } else {
+                            fileWriter.write(",");
+                        }
+                    }
+                    fileWriter.write("\n");
+                }
+            }
+            //végig megy a szerelők listáján és a megfelelő adatokat kiírja a fájlba
+            for (int i = 0; i < szerelok.size(); i++) {
+                if (szerelok.get(i).getVanPumpa()) {
                     mukodik = 1;
                 } else {
                     mukodik = 0;
                 }
-                fileWriter.write("cs" + "," + mezok.get(i).getId() + "," + mukodik + "," + mezok.get(i).getAllapot());
+                fileWriter.write("s" + "," + szerelok.get(i).nev + ",");
+                if (szerelok.get(i).getTartottCso() == null) {
+                    fileWriter.write(-1 + ",");
+                } else {
+                    fileWriter.write(szerelok.get(i).getTartottCso().getId() + ",");
+                }
+                fileWriter.write(szerelok.get(i).getMezo().getId() + "," + mukodik);
                 fileWriter.write("\n");
             }
-        }
-        for (int i=0;i < mezok.size();i++) {
-            if (mezok.get(i).getId().startsWith("c", 0) && !mezok.get(i).getId().startsWith("cs", 0)) {
-                fileWriter.write("c" + "," + mezok.get(i).getId() + ",");
-                for (int k = 0; k < mezok.get(i).getSzomszedokHossz(); k++) {
-                    fileWriter.write(mezok.get(i).getSzomszed(k).getId());
-                    if (k < mezok.get(i).getSzomszedokHossz() - 1) {
-                        fileWriter.write(";");
-                    } else if(mezok.get(i).getSzomszedokHossz() == 1){
-
-                    }
-                    else {
-                        fileWriter.write(",");
-                    }
-                }
+            //végig megy a nomádok listáján és a megfelelő adatokat kiírja a fájlba
+            for (int i = 0; i < nomadok.size(); i++) {
+                fileWriter.write("n" + "," + nomadok.get(i).nev + "," + nomadok.get(i).getMezo().getId());
                 fileWriter.write("\n");
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        for (int i=0;i < mezok.size();i++)
-        {
-            if(mezok.get(i).getId().startsWith("p",0))
-            {
-                if(mezok.get(i).getMukodik())
-                {
-                    mukodik=1;
-                }
-                else
-                {
-                    mukodik=0;
-                }
-                fileWriter.write("p"+","+mezok.get(i).getId()+",");
-
-                for (int k=0;k<mezok.get(i).getSzomszedokHossz();k++)
-                {
-                    fileWriter.write(mezok.get(i).getSzomszed(k).getId());
-                    if(k<mezok.get(i).getSzomszedokHossz()-1)
-                    {
-                        fileWriter.write(";");
-                    }
-                    else
-                    {
-                        fileWriter.write(",");
-                    }
-                }
-                fileWriter.write(mezok.get(i).GetHonnan().getId()+","+mezok.get(i).GetHova().getId()+","+mukodik);
-                fileWriter.write("\n");
-            }
-        }
-        for (int i=0;i<mezok.size();i++)
-        {
-            if(mezok.get(i).getId().startsWith("f",0))
-            {
-                fileWriter.write("f"+","+mezok.get(i).getId()+",");
-                for (int k=0;k<mezok.get(i).getSzomszedokHossz();k++)
-                {
-                    fileWriter.write(mezok.get(i).getSzomszed(k).getId());
-                    if(k<mezok.get(i).getSzomszedokHossz()-1)
-                    {
-                        fileWriter.write(";");
-                    }
-                    else if(mezok.get(i).getSzomszedokHossz() == 1){
-
-                    }
-                    else
-                    {
-                        fileWriter.write(",");
-                    }
-                }
-                fileWriter.write("\n");
-            }
-        }
-        //végig megy a szerelők listáján és a megfelelő adatokat kiírja a fájlba
-        for (int i=0;i<szerelok.size();i++)
-        {
-            if(szerelok.get(i).getVanPumpa())
-            {
-                mukodik=1;
-            }
-            else
-            {
-                mukodik=0;
-            }
-            fileWriter.write("s"+","+szerelok.get(i).nev+",");
-            if(szerelok.get(i).getTartottCso()==null)
-            {
-                fileWriter.write(-1+",");
-            }
-            else
-            {
-                fileWriter.write(szerelok.get(i).getTartottCso().getId()+",");
-            }
-            fileWriter.write(szerelok.get(i).getMezo().getId()+","+mukodik);
-            fileWriter.write("\n");
-        }
-        //végig megy a nomádok listáján és a megfelelő adatokat kiírja a fájlba
-        for (int i=0;i<nomadok.size();i++)
-        {
-            fileWriter.write("n"+","+nomadok.get(i).nev+","+nomadok.get(i).getMezo().getId());
-            fileWriter.write("\n");
-        }
-        fileWriter.close();
     }
     /**
      * Lekérdezi a szerelő pontjainak számát
