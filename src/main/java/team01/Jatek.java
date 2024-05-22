@@ -25,7 +25,7 @@ public class Jatek {
      */
 
     //konstruktor
-    Jatek(){
+    public Jatek(){
         mezok = new ArrayList<Mezo>();
         szerelok = new ArrayList<Szerelo>();
         nomadok = new ArrayList<Nomad>();
