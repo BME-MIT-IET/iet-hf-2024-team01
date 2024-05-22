@@ -1,0 +1,3 @@
+A manuális tesztek során rájöttünk, hogy a játék során a parancsokhoz szükséges billentyűk nem optimálisak, mivel az akciók és a billentyűk között nincs kapcsolat, ezért nehéz megjegyezni, hogy melyik billenytű melyik akciót takarja. Jobb lenne ha, a mozgás az 'M' billentyű lenyomásával működne stb. Erre a későbbiekben oda kell figyelni.
+
+A manuális tesztek pontos leírása a Manual_test mappa Manual_test.pdf dokumentumában található.
