@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="iet-hf-2024-team01" />
+        <module name="Skeleton" />
       </profile>
     </annotationProcessing>
   </component>
