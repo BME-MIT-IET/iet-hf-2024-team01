@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Manual_test/Manual_test.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Manual_test/Manual_test.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manual_code_review/CodeReview.md" beforeDir="false" afterPath="$PROJECT_DIR$/manual_code_review/CodeReview.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JatekPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JatekPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Frame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +161,7 @@
       <workItem from="1685392666481" duration="3751000" />
       <workItem from="1714820134865" duration="2852000" />
       <workItem from="1716308072708" duration="6021000" />
+      <workItem from="1716367772692" duration="1315000" />
     </task>
     <task id="LOCAL-00001" summary="Sivatag">
       <created>1680681178919</created>
