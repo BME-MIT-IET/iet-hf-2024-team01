@@ -15,7 +15,7 @@ public class GSzerelo extends G{
     public GSzerelo(int x, int y, String id)
     {
         super(x,y,id);
-        InputStream stream= getClass().getResourceAsStream("szerelo.png");
+        InputStream stream= getClass().getResourceAsStream("/szerelo.png");
         try {
             kep= ImageIO.read(stream);
         }
