@@ -32,12 +32,12 @@ Ezután a két issue eltűnt a SonarCloud-ból.
 
 A megoldáshoz felvettük a szükséges konstansokat
 ```java
-public static final String fontName = "Bookman Old Style";
-public static final String canStep = " léphet";
-public static final String stepsRemain = "Hátralevő lépések: ";
+public static final String FONT_NAME = "Bookman Old Style";
+public static final String CAN_STEP = " léphet";
+public static final String STEPS_REMAIN = "Hátralevő lépések: ";
 ```
 és ezeket használtuk a kódban.
 ```java
-korSzam.setFont(new Font(fontName,Font.BOLD,20));
+korSzam.setFont(new Font(FONT_NAME,Font.BOLD,20));
 ```
 
