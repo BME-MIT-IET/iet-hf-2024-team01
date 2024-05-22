@@ -5,9 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b265a34-519b-4e1d-b0a5-8afd1019349a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BDDDir/PumpaAtallitasStepDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BDDDir/PumpaJavitasStepDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/BDDDir/PumpaAtallitas.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/BDDDir/PumpaJavitas.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/team01_munkanapló.docx" beforeDir="false" afterPath="$PROJECT_DIR$/doc/team01_munkanapló.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team01/GCiszterna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GCiszterna.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team01/GForras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GForras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team01/GNomad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GNomad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team01/GSzerelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GSzerelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team01/Jatek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Jatek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team01/Mezo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Mezo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Skeleton-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Skeleton-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/Ciszterna.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/Ciszterna.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/Frame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/Frame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/Frame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/Frame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/Frame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/Frame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/GCiszterna.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/GCiszterna.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/GForras.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/GForras.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/GNomad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/GNomad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/GSzerelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/GSzerelo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/Jatek.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/Jatek.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/JatekPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/JatekPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/Mezo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/Mezo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/Szerelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/Szerelo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/BDDDir.TestRunner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/BDDDir.TestRunner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BDDDir.TestRunner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BDDDir.TestRunner.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +81,7 @@
     "Maven.Skeleton [validate].executor": "Run",
     "Maven.Skeleton [verify].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "bdd",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Tep Oli/6_felev/IET_HF/bddTest/iet-hf-2024-team01/src/test/java/BDDDir",
@@ -76,7 +106,7 @@
       <recent name="BDDDir" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestRunner">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -132,6 +162,7 @@
       <updated>1716364359389</updated>
       <workItem from="1716364360509" duration="4643000" />
       <workItem from="1716376759214" duration="9626000" />
+      <workItem from="1716402348435" duration="4344000" />
     </task>
     <servers />
   </component>

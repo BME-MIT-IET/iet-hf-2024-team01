@@ -7,7 +7,7 @@ public class Mezo {
     private boolean vanViz;
     private boolean mukodik;
     private boolean foglalt;
-    protected ArrayList<Mezo> szomszedok;
+    protected ArrayList<Mezo> szomszedok = new ArrayList<>();
     protected int allapot = 0;
     protected static int cso=1;
     protected static int pumpa=1;

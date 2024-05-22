@@ -15,7 +15,7 @@ public class GNomad extends G{
     public GNomad(int x, int y, String id)
     {
         super(x,y,id);
-        InputStream stream= getClass().getResourceAsStream("nomad.png");
+        InputStream stream= getClass().getResourceAsStream("/nomad.png");
         try {
             kep= ImageIO.read(stream);
         }

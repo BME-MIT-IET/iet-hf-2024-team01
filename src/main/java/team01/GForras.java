@@ -14,7 +14,7 @@ public class GForras extends G{
     public GForras(int x, int y, String id)
     {
         super(x,y,id);
-        InputStream stream= getClass().getResourceAsStream("forras.png");
+        InputStream stream= getClass().getResourceAsStream("/forras.png");
         try {
             kep= ImageIO.read(stream);
         }
