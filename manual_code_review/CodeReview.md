@@ -60,4 +60,16 @@ Másik lehetőség volt egy kivátelt dobni:
            
 ```
 
+### A metódusok ellátása @Override annotációval
 
+Az adott hiba az adott fájlban 3 helyen is
+
+![img_8.png](img_8.png)
+
+Az alábbi kódrészlettel lett a probléma megoldva:
+
+```java
+@Override
+    public void KorVege(Jatek j){...}
+
+```
