@@ -11,7 +11,7 @@ public class Szerelo extends Jatekos
      * A Szerelo osztály konstruktora
      * @param nev - A szerelő neve
      */
-    Szerelo(String nev){super(nev);}
+    public Szerelo(String nev){super(nev);}
 
     /**
      * A vanPumpa attribútum settere

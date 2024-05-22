@@ -1,6 +1,6 @@
 Feature: Cső csúszosság tesztelés
   Scenario Outline: Cső csúszosság tesztelés
-    Given A cső még <hány> körig csúszós
+    Given A cső <hány> körig csúszós
     When Elteilk egy kör
     Then A cső "<csúszóssága>"
 
