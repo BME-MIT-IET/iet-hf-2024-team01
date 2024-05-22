@@ -17,6 +17,7 @@ public class Ciszterna extends Csofogado{
      *
      * @param j - Az a játék, amit éppen játszanak
      */
+    @Override
     public void KorVege(Jatek j){
 
         for(Mezo szomszed: szomszedok){
@@ -36,6 +37,7 @@ public class Ciszterna extends Csofogado{
      *
      * @param sz - A szerelő, aki a ciszternán áll
      */
+    @Override
     public void PumpatAd(Szerelo sz){
         sz.setVanPumpa(true);
     }
@@ -43,6 +45,7 @@ public class Ciszterna extends Csofogado{
     /**
      * Új csövet hoz létre a ciszternánál
      */
+    @Override
     public void CiszteraBovul(Jatek j){
         Cso cs = new Cso("cs"+cso);
         SzomszedFelvesz(cs);
