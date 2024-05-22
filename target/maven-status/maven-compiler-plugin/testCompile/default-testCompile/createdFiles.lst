@@ -1,3 +1,5 @@
+BDDDir\MovementStepDefs.class
 BDDDir\TestRunner.class
-BDDDir\myTestStepDefs.class
+BDDDir\CsoLyukasStepDefs.class
+BDDDir\SzereloPumpatFelveszStepDefs.class
 BDDDir\CsoCsuszosStepDefs.class

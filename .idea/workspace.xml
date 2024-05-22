@@ -5,9 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b265a34-519b-4e1d-b0a5-8afd1019349a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BDDDir/MovementStepDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/BDDDir/SzereloElmozdul.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BDDDir/myTestStepDefs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/BDDDir/valami.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Skeleton-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Skeleton-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/GCiszterna.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/GCiszterna.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/GForras.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/GForras.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/GNomad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/GNomad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/GSzerelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/GSzerelo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team01/Szerelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team01/Szerelo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/BDDDir.TestRunner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/BDDDir.TestRunner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BDDDir.TestRunner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BDDDir.TestRunner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BDDDir/CsoCsuszos.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BDDDir/CsoCsuszos.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BDDDir/CsoCsuszosStepDefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BDDDir/CsoCsuszosStepDefs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BDDDir/myTestStepDefs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BDDDir/valami.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,34 +56,34 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "Cucumber Java.Feature: valami.executor": "Run",
-    "JUnit.TestRunner.executor": "Run",
-    "Maven.Skeleton [clean].executor": "Run",
-    "Maven.Skeleton [compile].executor": "Run",
-    "Maven.Skeleton [package].executor": "Run",
-    "Maven.Skeleton [test].executor": "Run",
-    "Maven.Skeleton [validate].executor": "Run",
-    "Maven.Skeleton [verify].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "bdd",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Tep Oli/6_felev/IET_HF/bddTest/iet-hf-2024-team01/src/test/java/BDDDir",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.excludes",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: valami.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Skeleton [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Skeleton [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Skeleton [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Skeleton [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Skeleton [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Skeleton [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bdd&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tep Oli/6_felev/IET_HF/bddTest/iet-hf-2024-team01/src/test/java/BDDDir&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.excludes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tep Oli\6_felev\IET_HF\bddTest\iet-hf-2024-team01\src\main\resources\team01" />
