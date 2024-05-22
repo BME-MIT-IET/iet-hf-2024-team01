@@ -15,6 +15,10 @@ public class JatekPanel extends JPanel {
     public JTextField szereloPont;
     public JTextField jatekosLepesek;
 
+    public static final String FONT_NAME = "Bookman Old Style";
+    public static final String CAN_STEP = " léphet";
+    public static final String STEPS_REMAIN = "Hátralevő lépések: ";
+
     /**
      * JatekPanel konstuktora. Itt hozza létre a gombokat, JTextFieldeket,
      * amiket majd később módosíthatunk a játék folyásának megfelelően.
@@ -36,8 +40,11 @@ public class JatekPanel extends JPanel {
         }
         else korSzam.setText("Körök száma: "+j.getKorok());
 
+
+
+
         korSzam.setOpaque(false);
-        korSzam.setFont(new Font("Bookman Old Style",Font.BOLD,20));
+        korSzam.setFont(new Font(FONT_NAME,Font.BOLD,20));
         korSzam.setDisabledTextColor(Color.WHITE);
         korSzam.setBorder(BorderFactory.createEmptyBorder());
         korSzam.setBounds(800,20,200,20);
@@ -45,7 +52,7 @@ public class JatekPanel extends JPanel {
 
         jatekosJon = new JTextField();
         jatekosJon.setOpaque(false);
-        jatekosJon.setFont(new Font("Bookman Old Style",Font.BOLD,20));
+        jatekosJon.setFont(new Font(FONT_NAME,Font.BOLD,20));
         jatekosJon.setDisabledTextColor(Color.WHITE);
         jatekosJon.setBorder(BorderFactory.createEmptyBorder());
         jatekosJon.setBounds(1000,20,250,20);
@@ -53,24 +60,24 @@ public class JatekPanel extends JPanel {
 
         jatekosLepesek = new JTextField();
         jatekosLepesek.setOpaque(false);
-        jatekosLepesek.setFont(new Font("Bookman Old Style",Font.BOLD,20));
+        jatekosLepesek.setFont(new Font(FONT_NAME,Font.BOLD,20));
         jatekosLepesek.setDisabledTextColor(Color.WHITE);
         jatekosLepesek.setBorder(BorderFactory.createEmptyBorder());
         jatekosLepesek.setBounds(800,40,250,20);
         jatekosLepesek.setEnabled(false);
 
         if(j.getjJatekosN()!=null){
-            jatekosJon.setText(j.getjJatekosN() + " léphet");
-            jatekosLepesek.setText("Hátralevő lépések: "+j.getjJatekosN().getLepes());
+            jatekosJon.setText(j.getjJatekosN() + CAN_STEP);
+            jatekosLepesek.setText(STEPS_REMAIN + j.getjJatekosN().getLepes());
         }
         if(j.getjJatekosSz()!=null){
-            jatekosJon.setText(j.getjJatekosSz() + " léphet");
-            jatekosLepesek.setText("Hátralevő lépések: "+j.getjJatekosSz().getLepes());
+            jatekosJon.setText(j.getjJatekosSz() + CAN_STEP);
+            jatekosLepesek.setText(STEPS_REMAIN + j.getjJatekosSz().getLepes());
         }
 
         nomadPont = new JTextField("Nomádok pontjai: "+j.getNomadPontok());
         nomadPont.setOpaque(false);
-        nomadPont.setFont(new Font("Bookman Old Style",Font.BOLD,20));
+        nomadPont.setFont(new Font(FONT_NAME,Font.BOLD,20));
         nomadPont.setDisabledTextColor(Color.WHITE);
         nomadPont.setBorder(BorderFactory.createEmptyBorder());
         nomadPont.setBounds(10,15,250,20);
@@ -78,7 +85,7 @@ public class JatekPanel extends JPanel {
 
         szereloPont = new JTextField("Szerelők pontjai: "+j.getSzereloPontok());
         szereloPont.setOpaque(false);
-        szereloPont.setFont(new Font("Bookman Old Style",Font.BOLD,20));
+        szereloPont.setFont(new Font(FONT_NAME,Font.BOLD,20));
         szereloPont.setDisabledTextColor(Color.WHITE);
         szereloPont.setBorder(BorderFactory.createEmptyBorder());
         szereloPont.setBounds(10,40,250,20);
@@ -427,12 +434,12 @@ public class JatekPanel extends JPanel {
         else korSzam.setText("Körök száma: "+j.getKorok());
 
         if(getJatek().getjJatekosN()!=null){
-            jatekosJon.setText(getJatek().getjJatekosN().getNev() + " léphet");
-            jatekosLepesek.setText("Hátralevő lépések: "+j.getjJatekosN().getLepes());
+            jatekosJon.setText(getJatek().getjJatekosN().getNev() + CAN_STEP);
+            jatekosLepesek.setText(STEPS_REMAIN + j.getjJatekosN().getLepes());
         }
         if(getJatek().getjJatekosSz()!=null){
-            jatekosJon.setText(getJatek().getjJatekosSz().getNev() + " léphet");
-            jatekosLepesek.setText("Hátralevő lépések: "+j.getjJatekosSz().getLepes());
+            jatekosJon.setText(getJatek().getjJatekosSz().getNev() + CAN_STEP);
+            jatekosLepesek.setText(STEPS_REMAIN + j.getjJatekosSz().getLepes());
         }
         nomadPont.setText("Nomádok pontjai: "+getJatek().getNomadPontok());
         szereloPont.setText("Szerelők pontjai: "+getJatek().getSzereloPontok());
@@ -468,7 +475,7 @@ public class JatekPanel extends JPanel {
         }
         else{
 
-            korSzam.setFont(new Font("Bookman Old Style",Font.BOLD,50));
+            korSzam.setFont(new Font(FONT_NAME,Font.BOLD,50));
             korSzam.setBounds(0,300,1200,80);
             korSzam.setHorizontalAlignment(JTextField.CENTER);
 
