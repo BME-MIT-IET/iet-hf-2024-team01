@@ -6,47 +6,45 @@
   <component name="ChangeListManager">
     <list default="true" id="2b265a34-519b-4e1d-b0a5-8afd1019349a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Skeleton-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Skeleton-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-27-46_936-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-27-46_936-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-30-42_273-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-30-42_273-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-31-04_238-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-31-04_238-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-31-28_559-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-31-28_559-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-32-45_088-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-32-45_088-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-33-11_245-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-33-11_245-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-33-49_412-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-33-49_412-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-53-03_474-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-53-03_474-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-59-57_685-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T14-59-57_685-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T15-00-19_036-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T15-00-19_036-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T15-01-32_027-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T15-01-32_027-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T15-04-14_588-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T15-04-14_588-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T15-05-52_321-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-05-21T15-05-52_321-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BDDDir.TestRunner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BDDDir.TestRunner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/bdd_test.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefDir/valami.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/valami.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ciszterna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Ciszterna.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Cso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Csofogado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Csofogado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Forras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Forras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/G.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/G.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GCiszterna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GCiszterna.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GCso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GCso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GForras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GForras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GNomad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GNomad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GPumpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GPumpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GSzellem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GSzellem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GSzerelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/GSzerelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Jatek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Jatek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JatekPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/JatekPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Jatekos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Jatekos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/MenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Mezo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Mezo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Nomad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Nomad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pumpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Pumpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rajzolhato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Rajzolhato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Szerelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team01/Szerelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ciszterna.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/team01/ciszterna.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/forras.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/team01/forras.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nomad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/team01/nomad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/szerelo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/team01/szerelo.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,6 +60,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Unnamed.executor": "Run",
     "Cucumber Java.Feature: valami.executor": "Run",
     "JUnit.TestRunner.executor": "Run",
     "Maven.Skeleton [clean].executor": "Run",
@@ -72,7 +72,7 @@
     "Maven.Skeleton [verify].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Tep Oli/6_felev/IET_HF/bddTest/iet-hf-2024-team01",
+    "last_opened_file_path": "C:/Users/Tep Oli/6_felev/IET_HF/bddTest/iet-hf-2024-team01/src/test/java/BDDDir",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,16 +81,29 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.excludes",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tep Oli\6_felev\IET_HF\bddTest\iet-hf-2024-team01\src\main\resources\team01" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="team01" />
       <recent name="BDDDir" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-20" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="team01.Main" />
+      <module name="Skeleton" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="IETHF" />
       <method v="2">
@@ -122,7 +135,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716364359389</updated>
       <workItem from="1716364360509" duration="4643000" />
-      <workItem from="1716376759214" duration="5217000" />
+      <workItem from="1716376759214" duration="9626000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,5 @@
+package team01;
+
 public class Nomad extends Jatekos{
     /**
      * A Nomad osztály konstruktora

@@ -1,3 +1,5 @@
+package team01;
+
 import static java.lang.String.valueOf;
 
 public class Szerelo extends Jatekos

@@ -1,3 +1,5 @@
+package team01;
+
 public class Csofogado extends Mezo{
     private final int maxBemenetek;
 

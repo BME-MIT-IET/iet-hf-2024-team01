@@ -1,3 +1,5 @@
+package team01;
+
 public abstract class Jatekos {
     protected final String nev;
     protected static int MAX_RAGADT=3;

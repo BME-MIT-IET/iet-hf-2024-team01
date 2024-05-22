@@ -1,3 +1,5 @@
+package team01;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Cso extends Mezo {

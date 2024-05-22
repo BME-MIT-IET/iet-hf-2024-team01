@@ -1,3 +1,5 @@
+package team01;
+
 import java.awt.*;
 
 public abstract class G implements Rajzolhato {
