@@ -1,0 +1,9 @@
+j,0,0,3
+cs,cs1,1,0
+cs,cs2,1,0
+cs,cs3,1,0
+c,c1,cs2;cs3
+p,p1,cs1;cs2;cs3,cs1,cs2,1
+f,f1,cs1
+s,Alfred,-1,p1,0
+n,Maja,f1
