@@ -41,7 +41,11 @@ public class Frame extends JFrame {
             }
 
             @Override
-            public void focusLost(FocusEvent e) {}
+            public void focusLost(FocusEvent e) {
+                /**
+                *   A projekt szempontjából ez a metódus nem szükséges, ezért nem lett implemetálva.
+                 */
+            }
         });
 
         /*
@@ -73,7 +77,9 @@ public class Frame extends JFrame {
         this.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-
+                /**
+                 *   A projekt szempontjából ez a metódus nem szükséges, ezért nem lett implemetálva.
+                 */
             }
 
             @Override
@@ -563,7 +569,7 @@ public class Frame extends JFrame {
 
             @Override
             public void keyReleased(KeyEvent e) {
-
+                throw new UnsupportedOperationException("projekt szempontjából ez a metódus nem szükséges, ezért nem lett implemetálva.");
             }
         });
 

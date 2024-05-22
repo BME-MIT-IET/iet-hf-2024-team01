@@ -41,3 +41,23 @@ public static final String STEPS_REMAIN = "Hátralevő lépések: ";
 korSzam.setFont(new Font(FONT_NAME,Font.BOLD,20));
 ```
 
+### Komment hozzáadása, hogy miért üres az adott metódus
+
+![img_7.png](img_7.png)
+
+Ez a hiba, ugyanebben a fájlban 3 másik helyen volt jelen.
+
+A megoldáshoz az alábbi kommentet raktuk a metódusok törzsébe:
+```java
+ /**
+  * projekt szempontjából ez a metódus nem szükséges, ezért nem lett implemetálva.
+  *  /
+```
+Másik lehetőség volt egy kivátelt dobni:
+
+```java
+ throw new UnsupportedOperationException("projekt szempontjából ez a metódus nem szükséges, ezért nem lett implemetálva.");
+           
+```
+
+
