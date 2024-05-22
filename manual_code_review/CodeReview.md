@@ -17,3 +17,27 @@ A két issue nagyban hasonlított egymásra:
 Mindkettőt a try-with-resources funkcionalitással oldottuk meg. Ennek során egy try blokkbe tettük a Reader/Writer objektumok használatát az alábbi módon:
 
 ![img_4.png](img_4.png)
+
+Ezután a két issue eltűnt a SonarCloud-ból.
+
+![img_5.png](img_5.png)
+
+## További Súlyos Issue-k:
+
+### Konstans definiálása duplikáció helyett
+
+3 darab hasonló hibajegy volt, amelyek a konstansok definiálásával voltak kapcsolatosak.
+
+![img_6.png](img_6.png)
+
+A megoldáshoz felvettük a szükséges konstansokat
+```java
+public static final String fontName = "Bookman Old Style";
+public static final String canStep = " léphet";
+public static final String stepsRemain = "Hátralevő lépések: ";
+```
+és ezeket használtuk a kódban.
+```java
+korSzam.setFont(new Font(fontName,Font.BOLD,20));
+```
+
